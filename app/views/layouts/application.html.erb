@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Robcastiglione</title>
+  <title>Robert Castiglione</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,7 +11,9 @@
 
 <%= render '/layouts/nav' %>
 
-<%= yield %>
+<main class="content">
+  <%= yield %>
+</main>
 
 </body>
 </html>
