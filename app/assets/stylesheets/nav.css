@@ -1,0 +1,32 @@
+#nav-main {
+  border-bottom: solid 1px white;
+  background-color: #111;
+}
+
+#nav-main li {
+  display: inline;
+  list-style: none;
+  padding-left: 5%;
+}
+
+#nav-main h3 {
+  display: inline;
+}
+
+#nav-main a {
+  text-decoration: none;
+  color: #666;
+}
+
+#nav-main a:hover {
+  text-decoration: underline;
+}
+
+.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  border-top: 0;
+}
