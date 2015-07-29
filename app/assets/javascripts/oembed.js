@@ -1,4 +1,9 @@
+// GLOBALS
+var numFilms = 0;
+var filmsEmbedded = 0;
+
 function makeOembedScripts() {
+  numFilms++;
   var videoStartUrl = 'http://www.vimeo.com/';
   var endpoint = 'http://www.vimeo.com/api/oembed.json';
   var callback = 'embedVideo';
@@ -18,6 +23,14 @@ function makeOembedScripts() {
 
 function embedVideo(video) {
   $('#'+video.video_id)[0].innerHTML = unescape(video.html);
+  filmsEmbedded++;
+  if (filmsEmbedded === numFilms) {
+    activateSlick();
+  }
+}
+
+function playersResize() {
+  
 }
 
 $(document).ready(makeOembedScripts);
