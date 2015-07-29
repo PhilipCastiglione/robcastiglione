@@ -1,0 +1,11 @@
+.loading-wrapper {
+  position:fixed;
+  top: 35vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.loading {
+  height: 30vh;
+  width: 40vh;
+}
