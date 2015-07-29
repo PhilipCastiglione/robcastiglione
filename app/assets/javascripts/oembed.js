@@ -1,16 +1,18 @@
 // GLOBALS
 var numFilms = 0;
 var filmsEmbedded = 0;
-
+var width = 0;
+var height = 0;
+  
 function makeOembedScripts() {
   numFilms++;
   var videoStartUrl = 'http://www.vimeo.com/';
   var endpoint = 'http://www.vimeo.com/api/oembed.json';
   var callback = 'embedVideo';
-  var width = window.innerWidth;
-  var height = window.innerHeight - $('.films-carousel')[0].getBoundingClientRect().top - 10;
   var url;
   var videoEndUrl;
+  width = window.innerWidth;
+  height = window.innerHeight - $('.films-carousel')[0].getBoundingClientRect().top - 10;
   $.each($('.film'), function(i, el) {
     videoEndUrl = el.id;
     url = endpoint + '?url=' + encodeURIComponent(videoStartUrl + videoEndUrl) + '&callback=' + callback + '&width=' + width +  '&height=' + height;
@@ -30,5 +32,9 @@ function embedVideo(video) {
 }
 
 function playersResize() {
-  
+  console.log('yo');
+  width = window.innerWidth;
+  height = window.innerHeight - $('.films-carousel')[0].getBoundingClientRect().top - 10;
+  $('.film').width(width);
+  $('.film').height(height);
 }
