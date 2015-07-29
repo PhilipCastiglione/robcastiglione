@@ -25,12 +25,10 @@ function embedVideo(video) {
   $('#'+video.video_id)[0].innerHTML = unescape(video.html);
   filmsEmbedded++;
   if (filmsEmbedded === numFilms) {
-    activateSlick();
+    activateFilmsSlick();
   }
 }
 
 function playersResize() {
   
 }
-
-$(document).ready(makeOembedScripts);
