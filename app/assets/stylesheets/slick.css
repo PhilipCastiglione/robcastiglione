@@ -121,16 +121,11 @@
 /* CUSTOM */
 .slick-prev, .slick-next {
   background: none;
-  border: 3px solid #AAA;
-  -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-          border-radius: 100%;
+  border: none;
   position: fixed;
   top: 45vh;
   z-index: 1;
-  font-size: 4vh;
-  width: 8vh;
-  height: 8vh;
+  font-size: 10vh;
 }
 
 .slick-prev {
