@@ -1,5 +1,5 @@
 <div class="films-carousel">
-  <div class="film" id="130279788"></div>
-  <div class="film" id="133122341"></div>
-  <div class="film" id="132493667"></div>
+  <% @films.each do |f| %>
+    <div class="film" id="<%= f.url %>"></div>
+  <% end %>
 </div>
