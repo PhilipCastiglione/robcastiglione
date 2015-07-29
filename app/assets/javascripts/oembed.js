@@ -1,20 +1,23 @@
-// This is the URL of the video you want to load
-var videoUrl = 'http://www.vimeo.com/7100569';
-var endpoint = 'http://www.vimeo.com/api/oembed.json';
-// Tell Vimeo what function to call
-var callback = 'embedVideo';
-// Put together the URL
-var url = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=640';
-// This function puts the video on the page
+function makeOembedScripts() {
+  var videoStartUrl = 'http://www.vimeo.com/';
+  var endpoint = 'http://www.vimeo.com/api/oembed.json';
+  var callback = 'embedVideo';
+  var width = window.innerWidth;
+  var height = window.innerHeight - $('.film-carousel')[0].getBoundingClientRect().top - 10;
+  var url;
+  var videoEndUrl;
+  $.each($('.film'), function(i, el) {
+    videoEndUrl = el.id;
+    url = endpoint + '?url=' + encodeURIComponent(videoStartUrl + videoEndUrl) + '&callback=' + callback + '&width=' + width +  '&height=' + height;
+    var $js = $("<script>");
+    $js.attr('type', 'text/javascript');
+    $js.attr('src', url);
+    $('head').append($js);
+  });
+}
+
 function embedVideo(video) {
-    document.getElementById('embed').innerHTML = unescape(video.html);
+  $('#'+video.video_id)[0].innerHTML = unescape(video.html);
 }
-// This function loads the data from Vimeo
-function init() {
-    var js = document.createElement('script');
-    js.setAttribute('type', 'text/javascript');
-    js.setAttribute('src', url);
-    document.getElementsByTagName('head').item(0).appendChild(js);
-}
-// Call our init function when the page loads
-window.onload = init;
+
+$(document).ready(makeOembedScripts);
