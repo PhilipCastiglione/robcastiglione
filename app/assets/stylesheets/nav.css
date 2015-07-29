@@ -3,13 +3,18 @@
   background-color: #111;
 }
 
+#nav-main ul {
+  margin-left: 0;
+  padding: 0;
+}
+
 #nav-main li {
   display: inline;
   list-style: none;
-  padding-left: 5%;
+  padding-left: 3%;
 }
 
-#nav-main h3 {
+#nav-main h2 {
   display: inline;
 }
 

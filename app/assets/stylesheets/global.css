@@ -3,3 +3,8 @@ body {
   color: #AAA;
   font-family: 'Open Sans', sans-serif;
 }
+
+.copy {
+  width: 60%;
+  margin: 0 auto;
+}
