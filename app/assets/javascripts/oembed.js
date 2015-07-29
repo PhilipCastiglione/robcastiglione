@@ -8,7 +8,7 @@ function makeOembedScripts() {
   var endpoint = 'http://www.vimeo.com/api/oembed.json';
   var callback = 'embedVideo';
   var width = window.innerWidth;
-  var height = window.innerHeight - $('.film-carousel')[0].getBoundingClientRect().top - 10;
+  var height = window.innerHeight - $('.films-carousel')[0].getBoundingClientRect().top - 10;
   var url;
   var videoEndUrl;
   $.each($('.film'), function(i, el) {
