@@ -10,5 +10,15 @@ function ready() {
     activateStillsSlick();
   }
 
+  var stickyNavTop = $('#nav-main').offset().top;
+   
+  var stickyNav = function(){
+    var scrollTop = $(window).scrollTop();
+    (scrollTop > stickyNavTop)? $('#nav-main').addClass('sticky') : $('#nav-main').removeClass('sticky');
+  };
+   
+  stickyNav();
+   
   $(window).resize(playersResize);
+  $(window).scroll(stickyNav);
 }

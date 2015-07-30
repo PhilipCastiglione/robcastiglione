@@ -32,7 +32,6 @@ function embedVideo(video) {
 }
 
 function playersResize() {
-  console.log('yo');
   width = window.innerWidth;
   height = window.innerHeight - $('.films-carousel')[0].getBoundingClientRect().top - 10;
   $('.film').width(width);
