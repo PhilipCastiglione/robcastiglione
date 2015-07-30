@@ -8,6 +8,8 @@ function ready() {
     makeOembedScripts();
   } else if (window.location.pathname === '/stills') {
     activateStillsSlick();
+  } else if (window.location.pathname === '/sound') {
+    soundcloudWidget();
   }
 
   var stickyNavTop = $('#nav-main').offset().top;
