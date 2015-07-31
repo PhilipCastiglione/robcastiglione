@@ -10,7 +10,7 @@ function ready() {
     activateStillsSlick();
   } else if (window.location.pathname === '/sound') {
     soundcloudWidget();
-    SC.oEmbed("http://soundcloud.com/forss/flickermood", document.getElementById('soundcloudWidget'));
+    SC.oEmbed("http://soundcloud.com/forss/flickermood", document.getElementById('#soundcloudWidget'));
   }
 
   var stickyNavTop = $('#nav-main').offset().top;
