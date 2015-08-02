@@ -1,5 +1,8 @@
-<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
-<script>
-    SC.initialize({ client_id: "YOUR_CLIENT_ID" });
-</script>
-<div id="soundcloudWidget"></div>
+<div class="loading-wrapper">
+  <img class="loading" src="/loading.gif" alt="loading...">
+</div>
+<div class="sounds-carousel">
+  <% @sounds.each do |s| %>
+    <div class="sound" id="<%= s.url %>"></div>
+  <% end %>
+</div>

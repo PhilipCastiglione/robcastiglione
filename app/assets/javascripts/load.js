@@ -1,16 +1,20 @@
-$(document).ready(ready);
-$(document).on('page:load', ready);
+$(ready);
+
+function checkPath(path) {
+  return window.location.pathname === path;
+}
 
 function ready() {
-  if (window.location.pathname === '/') {
+  if (checkPath('/')) {
     numFilms = 0;
     filmsEmbedded = 0;
     makeOembedScripts();
-  } else if (window.location.pathname === '/stills') {
+  } else if (checkPath('/sound')) {
+    numSounds = 0;
+    soundsEmbedded = 0;
+    soundcloudWidget(embedSoundcloud);
+  } else if (checkPath('/stills')) {
     activateStillsSlick();
-  } else if (window.location.pathname === '/sound') {
-    soundcloudWidget();
-    SC.oEmbed("http://soundcloud.com/forss/flickermood", document.getElementById('soundcloudWidget'));
   }
 
   var stickyNavTop = $('#nav-main').offset().top;
