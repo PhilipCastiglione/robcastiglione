@@ -5,8 +5,8 @@ var width = 0;
 var height = 0;
   
 function makeOembedScripts() {
-  var videoStartUrl = 'http://www.vimeo.com/';
-  var endpoint = 'http://www.vimeo.com/api/oembed.json';
+  var videoStartUrl = 'https://www.vimeo.com/';
+  var endpoint = 'https://www.vimeo.com/api/oembed.json';
   var callback = 'embedVideo';
   var url;
   var videoEndUrl;
