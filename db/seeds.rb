@@ -43,11 +43,11 @@ end
 puts "Created #{FilmCredit.count} film credits."
 
 puts "Purged #{Sound.destroy_all.count} sounds."
-[{title: 'Flickermood',
-  url: 'https://soundcloud.com/forss/flickermood',
-  short_description: 'Forss ipsum dolor sit amet, consectetur adipisicing elit. Inventore mollitia reprehenderit dolores harum totam dicta molestiae quisquam commodi vero fuga cum modi, laudantium, delectus fugiat voluptatibus deserunt, ab similique vel.'},
-  {title: 'Funk for Nerds',
-  url: 'https://soundcloud.com/forss/funk-for-nerds',
+[{title: 'Introitus',
+  url: 'https://soundcloud.com/forss/introitus',
+  short_description: 'Introitus ipsum dolor sit amet, consectetur adipisicing elit. Inventore mollitia reprehenderit dolores harum totam dicta molestiae quisquam commodi vero fuga cum modi, laudantium, delectus fugiat voluptatibus deserunt, ab similique vel.'},
+  {title: 'Regulus',
+  url: 'https://soundcloud.com/forss/regulus',
   short_description: 'Loving the glitchy staccato funkiness of this - set gut!! Ich bin ein Nerd'},
   {title: 'Diligam',
   url: 'https://soundcloud.com/forss/diligam',
