@@ -21,11 +21,12 @@
 
 #nav-main a {
   text-decoration: none;
+  transition: color 0.3s ease;
   color: #AAA;
 }
 
 #nav-main a:hover {
-  text-decoration: underline;
+  color: #DDD;
 }
 
 .sticky {
