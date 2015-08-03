@@ -126,6 +126,9 @@
   top: 45vh;
   z-index: 1;
   font-size: 10vh;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 

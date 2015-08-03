@@ -21,6 +21,9 @@
 
 #nav-main a {
   text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   color: #AAA;
 }
