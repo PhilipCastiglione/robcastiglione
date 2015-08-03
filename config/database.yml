@@ -25,3 +25,5 @@ production:
   database: rob_database_production
   pool: 5
   timeout: 5000
+  username: ENV["DB_USERNAME"]
+  password: ENV["DB_PASSWORD"]
