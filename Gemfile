@@ -32,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use devise for authentication
+gem 'devise'
+
 group :production do
   # Use pg as the production database
   gem 'pg'
