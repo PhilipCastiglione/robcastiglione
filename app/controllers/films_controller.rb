@@ -9,17 +9,14 @@ class FilmsController < ApplicationController
   end
 
   def update
-
+    puts params
+    # @film = Film.find(params[:id])
+    # redirect_to 'user_root_path' if update(film_params)
+    redirect_to user_root_path, status: :see_other
   end
 
   def destroy
     @film = Film.find(params[:id])
-    redirect_to 'user_root_path' if @film.destroy
-  end
-
-  private
-
-  def film_params
-
+    redirect_to user_root_path, status: :see_other if @film.destroy
   end
 end

@@ -15,6 +15,8 @@ function ready() {
     soundcloudWidget(embedSoundcloud);
   } else if (checkPath('/stills')) {
     activateStillsSlick();
+  } else if (checkPath('/admin')) {
+    attachAdminListeners();
   }
 
   var stickyNavTop = $('#nav-main').offset().top;

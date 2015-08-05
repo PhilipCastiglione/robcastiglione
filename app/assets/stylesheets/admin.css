@@ -1,0 +1,19 @@
+table, th, td {
+  border: 1px solid #AAA;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.header {
+  text-align: center;
+}
+
+.admin td {
+  padding: 7px;
+}
+
+.admin th {
+  padding: 7px;
+}
