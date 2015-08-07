@@ -9,10 +9,11 @@ class FilmsController < ApplicationController
   end
 
   def update
-    puts params
-    # @film = Film.find(params[:id])
-    # redirect_to 'user_root_path' if update(film_params)
-    redirect_to user_root_path, status: :see_other
+    @film = Film.find(params[:id])
+    @film.title = params[:title]
+    @film.short_description = params[:short_description]
+    @film.url = params[:url]
+    redirect_to user_root_path, status: :see_other if @film.save
   end
 
   def destroy
