@@ -2,7 +2,10 @@
   <img class="loading" src="/loading.gif" alt="loading...">
 </div>
 <div class="stills-carousel">
-  <% @stills.each do |s| %>
-    <div class="still"><img src="<%= s.url %>" alt="<%= s.title %>"></div>
+  <% @stills.each do |still| %>
+    <div>
+      <%= render partial: "/shared/information_overlay", locals: {content: still} %>
+      <div class="still"><img src="<%= still.url %>" alt="<%= still.title %>"></div>
+    </div>
   <% end %>
 </div>

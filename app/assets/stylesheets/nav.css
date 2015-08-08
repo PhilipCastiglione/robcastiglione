@@ -1,5 +1,5 @@
 #nav-main {
-  border-bottom: solid 1px white;
+  border-bottom: solid 1px #EEE;
   background-color: #000;
 }
 
@@ -17,7 +17,13 @@
 #nav-main h2 {
   display: inline;
   padding: 0 2%;
+  color: #EEE;
 }
+
+/* MAYBE BREAKPOINT THIS ON THE li h2
+.thingo {
+  display: block;
+}*/
 
 #nav-main a {
   text-decoration: none;
@@ -39,4 +45,32 @@
   width: 100%;
   z-index: 1;
   border-top: 0;
+}
+
+#nav-main #overlay-button {
+  float: right;
+  margin-right: 10px;
+  width: 6vh;
+  height: 6vh;
+  padding-left: 0;
+}
+
+#nav-main #overlay-button img {
+  position: absolute;
+  width: 6vh;
+  height: 6vh;
+  cursor: pointer;
+}
+
+
+.front {
+  z-index: 1;
+}
+
+.front:hover {
+  z-index: 0;
+}
+
+.back:hover {
+  z-index: 2;
 }

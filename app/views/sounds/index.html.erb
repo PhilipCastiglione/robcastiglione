@@ -2,7 +2,10 @@
   <img class="loading" src="/loading.gif" alt="loading...">
 </div>
 <div class="sounds-carousel">
-  <% @sounds.each do |s| %>
-    <div class="sound" id="<%= s.url %>"></div>
+  <% @sounds.each do |sound| %>
+    <div>
+      <%= render partial: "/shared/information_overlay", locals: {content: sound} %>
+      <div class="sound" id="<%= sound.url %>"></div>
+    </div>
   <% end %>
 </div>

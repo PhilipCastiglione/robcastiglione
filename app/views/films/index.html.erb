@@ -2,7 +2,10 @@
   <img class="loading" src="/loading.gif" alt="loading...">
 </div>
 <div class="films-carousel">
-  <% @films.each do |f| %>
-    <div class="film" id="<%= f.url %>"></div>
+  <% @films.each do |film| %>
+    <div>
+      <%= render partial: "/shared/information_overlay", locals: {content: film} %>
+      <div class="film" id="<%= film.url %>"></div>
+    </div>
   <% end %>
 </div>

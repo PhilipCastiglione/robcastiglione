@@ -5,16 +5,20 @@ function checkPath(path) {
 }
 
 function ready() {
+  hideOverlayAndButton();
   if (checkPath('/')) {
     numFilms = 0;
     filmsEmbedded = 0;
     makeOembedScripts();
+    $('.overlay-wrapper').on('click', hideOverlay);
   } else if (checkPath('/sounds')) {
     numSounds = 0;
     soundsEmbedded = 0;
     soundcloudWidget(embedSoundcloud);
+    $('.overlay-wrapper').on('click', hideOverlay);
   } else if (checkPath('/stills')) {
     activateStillsSlick();
+    $('.overlay-wrapper').on('click', hideOverlay);
   } else if (checkPath('/admin')) {
     attachAdminListeners();
   }

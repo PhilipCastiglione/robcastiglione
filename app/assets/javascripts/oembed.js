@@ -3,7 +3,7 @@ var numFilms = 0;
 var filmsEmbedded = 0;
 var width = 0;
 var height = 0;
-  
+
 function makeOembedScripts() {
   var videoStartUrl = 'https://www.vimeo.com/';
   var endpoint = 'https://www.vimeo.com/api/oembed.json';
