@@ -4,11 +4,22 @@ function attachAdminListeners() {
       soundsCounter = 0,
       stillsCounter = 0;
 
-  $('.new').on('click', newToAdd)
-  $('.edit').on('click', editToUpdate)
+  $('.new').on('click', makeAddRow)
+  $('.edit').on('click', editToUpdateRow)
   $('.delete').on('click', deleteInstance)
 
-  function newToAdd() {
+  function makeTheCallTony(data, method) {
+    $.ajax({
+      url: "/" + $(event.target).attr('data-controller'),
+      dataType: 'json',
+      data: data,
+      method: method
+    }).done(function() {
+      location.reload();
+    });
+  }
+
+  function makeAddRow() {
     if ($(event.target).attr('data-controller') == 'films') {
       addClassId = 'film' + filmsCounter;
       filmsCounter++;
@@ -38,13 +49,8 @@ function attachAdminListeners() {
     $cancelBtn.text('cancel');
     var $cancel = $('<td>').html($cancelBtn);
 
-    $($(event.target).parents()[1]).before($('<tr>').append(
-      $title,
-      $shortDescription,
-      $url,
-      $save,
-      $cancel
-    ));
+    $row = $('<tr>').append($title, $shortDescription, $url, $save, $cancel);
+    $($(event.target).parents()[1]).before($row);
   }
 
   function cancelAdd() {
@@ -53,24 +59,17 @@ function attachAdminListeners() {
 
   function addInstance() {
     var id = $(event.target).attr('data-instance');
-    $.ajax({
-      url: "/" + $(event.target).attr('data-controller'),
-      dataType: 'json',
-      data: {
-        title: $('#' + id + 'new-title').val(),
-        short_description: $('#' + id + 'new-short-description').val(),
-        url: $('#' + id + 'new-url').val()
-      },
-      method: 'POST'
-    }).done(function() {
-      location.reload();
-    });
+    var data = {
+      title: $('#' + id + 'new-title').val(),
+      short_description: $('#' + id + 'new-short-description').val(),
+      url: $('#' + id + 'new-url').val()
+    };
+    makeTheCallTony(data, 'POST');
   }
 
-  function editToUpdate() {
+  function editToUpdateRow() {
     var id, $els, text, type;
     id = $(event.target).attr('data-instance');
-    console.log(id);
     els = ['title', 'short-description', 'url'];
     $.each(els, function(i, el) {
       $el = $('#' + id + '-' + el);
@@ -111,35 +110,19 @@ function attachAdminListeners() {
 
   function updateInstance() {
     var id = $(event.target).attr('data-instance');
-    $.ajax({
-      url: "/" + $(event.target).attr('data-controller'),
-      dataType: 'json',
-      data: {
-        id: id.slice(2),
-        title: $('#' + id + '-title').children().val(),
-        short_description: $('#' + id + '-short-description').children().val(),
-        url: $('#' + id + '-url').children().val()
-      },
-      method: 'PUT'
-    }).done(function() {
-      location.reload();
-    });
+    var data = {
+      id: id.slice(2),
+      title: $('#' + id + '-title').children().val(),
+      short_description: $('#' + id + '-short-description').children().val(),
+      url: $('#' + id + '-url').children().val()
+    };
+    makeTheCallTony(data, 'PUT');
   }
 
   function deleteInstance() {
-    $.ajax({
-      url: "/" + $(event.target).attr('data-controller'),
-      dataType: 'json',
-      data: {
-        id: $(event.target).attr('data-instance').slice(2)
-      },
-      method: 'DELETE'
-    }).done(function() {
-      location.reload();
-    });
+    var data = {
+      id: $(event.target).attr('data-instance').slice(2)
+    };
+    makeTheCallTony(data, 'DELETE');
   }
 }
-
-// amke the text area bigger with css
-// refactor omg
-// refactor out ajax into func
