@@ -7,7 +7,7 @@ function embedSoundcloud() {
   $.each($('.sound'), function(i, el) {
     numSounds++;
     SC.oEmbed(el.id, function(res) {
-      if (checkPath('/sound')) {
+      if (checkPath('/sounds')) {
         soundsEmbedded++;
         $(el).html(res.html);
         if (soundsEmbedded === numSounds) {

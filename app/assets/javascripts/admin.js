@@ -1,26 +1,76 @@
 function attachAdminListeners() {
-  $('.new').on('click', logit)
+  var addClassId,
+      filmsCounter = 0,
+      soundsCounter = 0,
+      stillsCounter = 0;
+
+  $('.new').on('click', newToAdd)
   $('.edit').on('click', editToUpdate)
   $('.delete').on('click', deleteInstance)
 
-  function logit() {
-    console.log(event.target);
+  function newToAdd() {
+    if ($(event.target).attr('data-controller') == 'films') {
+      addClassId = 'film' + filmsCounter;
+      filmsCounter++;
+    } else if ($(event.target).attr('data-controller') == 'sounds') {
+      addClassId = 'sound' + soundsCounter;
+      soundsCounter++;
+    } else if ($(event.target).attr('data-controller') == 'stills') {
+      addClassId = 'still' + stillsCounter;
+      stillsCounter++;
+    } else {
+      alert('wtf something broke');
+    }
+
+    var $title = $('<td>').html($('<input>').attr('id', addClassId + 'new-title'));
+    var $shortDescription = $('<td>').html($('<textarea>').attr('id', addClassId + 'new-short-description'));
+    var $url = $('<td>').html($('<input>').attr('id', addClassId + 'new-url'));
+    
+    var $saveBtn = $('<button>').attr('class', 'save');
+    $saveBtn.attr('data-instance', addClassId);
+    $saveBtn.attr('data-controller', $(event.target).attr('data-controller'));
+    $saveBtn.on('click', addInstance);
+    $saveBtn.text('save');
+    var $save = $('<td>').html($saveBtn);
+    
+    var $cancelBtn = $('<button>').attr('class', 'cancel-add');
+    $cancelBtn.on('click', cancelAdd);
+    $cancelBtn.text('cancel');
+    var $cancel = $('<td>').html($cancelBtn);
+
+    $($(event.target).parents()[1]).before($('<tr>').append(
+      $title,
+      $shortDescription,
+      $url,
+      $save,
+      $cancel
+    ));
+  }
+
+  function cancelAdd() {
+    $($(event.target).parents()[1]).detach();
   }
 
   function addInstance() {
+    var id = $(event.target).attr('data-instance');
     $.ajax({
       url: "/" + $(event.target).attr('data-controller'),
-      data: {
-
-      },
       dataType: 'json',
+      data: {
+        title: $('#' + id + 'new-title').val(),
+        short_description: $('#' + id + 'new-short-description').val(),
+        url: $('#' + id + 'new-url').val()
+      },
       method: 'POST'
-    })
+    }).done(function() {
+      location.reload();
+    });
   }
 
   function editToUpdate() {
-    var id, $els, $title, $short_description, $url, text, type;
+    var id, $els, text, type;
     id = $(event.target).attr('data-instance');
+    console.log(id);
     els = ['title', 'short-description', 'url'];
     $.each(els, function(i, el) {
       $el = $('#' + id + '-' + el);
@@ -33,18 +83,17 @@ function attachAdminListeners() {
     $edit.off('click', editToUpdate);
     $edit.on('click', updateInstance);
     $del = $('#' + id + '-delete .delete');
-    $del.attr('class', 'cancel');
+    $del.attr('class', 'cancel-edit');
     $del.text('cancel');
     $del.off('click', deleteInstance);
     $del.on('click', cancelEdit);
-    // amke the text area bigger with css
   }
 
   function cancelEdit() {
-    var id, $els, $title, $short_description, $url, text, type;
+    var id, $els, text, type;
     id = $(event.target).attr('data-instance');
-    els = ['title', 'short-description', 'url'];
-    $.each(els, function(i, el) {
+    var fields = ['title', 'short-description', 'url'];
+    $.each(fields, function(i, el) {
       $el = $('#' + id + '-' + el);
       $el.text($el.children().val());
     });
@@ -53,7 +102,7 @@ function attachAdminListeners() {
     $edit.text('edit');
     $edit.off('click', updateInstance);
     $edit.on('click', editToUpdate);
-    $del = $('#' + id + '-delete .cancel');
+    $del = $('#' + id + '-delete .cancel-edit');
     $del.attr('class', 'delete');
     $del.text('delete');
     $del.off('click', cancelEdit);
@@ -61,13 +110,12 @@ function attachAdminListeners() {
   }
 
   function updateInstance() {
-    logit();
     var id = $(event.target).attr('data-instance');
     $.ajax({
       url: "/" + $(event.target).attr('data-controller'),
       dataType: 'json',
       data: {
-        id: id,
+        id: id.slice(2),
         title: $('#' + id + '-title').children().val(),
         short_description: $('#' + id + '-short-description').children().val(),
         url: $('#' + id + '-url').children().val()
@@ -83,7 +131,7 @@ function attachAdminListeners() {
       url: "/" + $(event.target).attr('data-controller'),
       dataType: 'json',
       data: {
-        id: $(event.target).attr('data-instance')
+        id: $(event.target).attr('data-instance').slice(2)
       },
       method: 'DELETE'
     }).done(function() {
@@ -91,3 +139,7 @@ function attachAdminListeners() {
     });
   }
 }
+
+// amke the text area bigger with css
+// refactor omg
+// refactor out ajax into func

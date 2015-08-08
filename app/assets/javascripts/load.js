@@ -9,7 +9,7 @@ function ready() {
     numFilms = 0;
     filmsEmbedded = 0;
     makeOembedScripts();
-  } else if (checkPath('/sound')) {
+  } else if (checkPath('/sounds')) {
     numSounds = 0;
     soundsEmbedded = 0;
     soundcloudWidget(embedSoundcloud);

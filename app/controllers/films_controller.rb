@@ -4,8 +4,12 @@ class FilmsController < ApplicationController
   end
 
   def create
-    @film = Film.new(film_params)
-    redirect_to 'user_root_path' if @film.save
+    @film = Film.new
+    @film.title = params[:title]
+    @film.short_description = params[:short_description]
+    @film.url = params[:url]
+    @film.save
+    render json: @film
   end
 
   def update
@@ -13,11 +17,13 @@ class FilmsController < ApplicationController
     @film.title = params[:title]
     @film.short_description = params[:short_description]
     @film.url = params[:url]
-    redirect_to user_root_path, status: :see_other if @film.save
+    @film.save
+    render json: @film
   end
 
   def destroy
     @film = Film.find(params[:id])
-    redirect_to user_root_path, status: :see_other if @film.destroy
+    @film.destroy
+    render json: nil
   end
 end
