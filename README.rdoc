@@ -29,14 +29,14 @@ Please feel free to use a different markup language if you do not plan to run
 
 TODO:
 information views
-build cms and connect
-add order in cms
+build credits into cms and connect
+add order in cms and connect
 clear up db cols
 polish css
 about content
 contact content
-refactor js
+refactor everything
 hosting solution
 check different browsers
-mobile
-testing
+mobile and tablet
+thorough testing
