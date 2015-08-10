@@ -136,7 +136,7 @@
 .slick-prev:hover, .slick-next:hover {
   color: #EEE;
   font-weight: bolder;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);

@@ -71,6 +71,6 @@
   z-index: 0;
 }
 
-.back:hover, .hovered {
+.back:hover {
   z-index: 2;
 }

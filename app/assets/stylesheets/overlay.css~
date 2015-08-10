@@ -29,10 +29,6 @@
   font-style: italic;
 }
 
-.not-displayed {
-  display: none;
-}
-
 .hidden {
   animation-duration: .5s;
   animation-name: animateHide;

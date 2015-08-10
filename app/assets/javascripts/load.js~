@@ -10,15 +10,15 @@ function ready() {
     numFilms = 0;
     filmsEmbedded = 0;
     makeOembedScripts();
-    initOverlayPage();
+    $('.overlay-wrapper').on('click', hideOverlay);
   } else if (checkPath('/sounds')) {
     numSounds = 0;
     soundsEmbedded = 0;
     soundcloudWidget(embedSoundcloud);
-    initOverlayPage();
+    $('.overlay-wrapper').on('click', hideOverlay);
   } else if (checkPath('/stills')) {
     activateStillsSlick();
-    initOverlayPage();
+    $('.overlay-wrapper').on('click', hideOverlay);
   } else if (checkPath('/admin')) {
     attachAdminListeners();
   }

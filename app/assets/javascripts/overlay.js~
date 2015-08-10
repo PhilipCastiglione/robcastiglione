@@ -1,6 +1,4 @@
 function showOverlay() {
-  $(".overlay-wrapper").removeClass('not-displayed');
-  $("#overlay-button").removeClass('not-displayed');
   $(".overlay-wrapper").toggleClass('hidden', $(this).hasClass('hidden'));
   $("#overlay-button").toggleClass('hidden', $(this).hasClass('hidden'));
 }

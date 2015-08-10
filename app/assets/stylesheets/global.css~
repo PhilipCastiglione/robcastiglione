@@ -1,0 +1,27 @@
+body {
+  background-color: #000;
+  color: #AAA;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.copy {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.hidden {
+  animation-duration: 1s;
+  animation-name: animateHide;
+  bottom: 100vh;
+}
+
+@keyframes animateHide {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: 100vh;
+  }
+}
+
