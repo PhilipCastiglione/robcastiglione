@@ -1,0 +1,3 @@
+<%= render partial: "/shared/admin_table", locals: {content: @films} %>
+<%= render partial: "/shared/admin_table", locals: {content: @sounds} %>
+<%= render partial: "/shared/admin_table", locals: {content: @stills} %>

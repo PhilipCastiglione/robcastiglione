@@ -20,13 +20,13 @@ puts "Purged #{FilmCredit.destroy_all.count} film credits."
   name: 'Robert Castiglione'},
   {film_id: Film.find_by(title: 'Shaman').id,
   role: 'Cinematographer',
-  name: 'John Smith'},
+  name: 'Another Person'},
   {film_id: Film.find_by(title: 'That Which Feeds Us').id,
   role: 'Director',
   name: 'Robert Castiglione'},
   {film_id: Film.find_by(title: 'That Which Feeds Us').id,
   role: 'DOP',
-  name: 'Jane Doe'},
+  name: 'Third Person'},
   {film_id: Film.find_by(title: 'That Which Feeds Us').id,
   role: 'Editor',
   name: 'Robert Castiglione'},
@@ -35,7 +35,7 @@ puts "Purged #{FilmCredit.destroy_all.count} film credits."
   name: 'Robert Castiglione'},
   {film_id: Film.find_by(title: 'Otherwise Engaged').id,
   role: 'Magician',
-  name: 'Mysterio Wizard'}
+  name: 'Quick Fingers'}
 ].each do |fc|
   film_credit = FilmCredit.new(fc)
   puts film_credit.errors.full_messages unless film_credit.save

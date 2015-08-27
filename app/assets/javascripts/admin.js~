@@ -93,7 +93,7 @@ function attachAdminListeners() {
     makeTheCallTony(data, 'POST');
   }
 
- // BELOW THIS POINT NEED TO INCLUDE FILM CREDITS (ALSO MAKE CONTROLLER PLS)
+ // BELOW THIS POINT NEED TO INCLUDE FILM CREDITS
   function editToUpdateRow() {
     var id, $els, text, type;
     id = $(event.target).attr('data-instance');
