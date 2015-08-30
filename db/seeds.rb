@@ -1,12 +1,12 @@
 puts "Purged #{Film.destroy_all.count} films."
 [{title: 'Shaman',
-  url: '134639255',
+  url: 'https://vimeo.com/134639255',
   short_description: 'Inspired by the Himalayan Shaman of Northern Nepal (1967) and John T. Hitchcock, University of Wisconsin'},
   {title: 'That Which Feeds Us',
-  url: '130279788',
+  url: 'https://vimeo.com/130279788',
   short_description: 'The film highlights a way to address some of the most pressing environmental and health crises facing the island of Kauai - and of island Earth. That may sound like an outstanding claim, but as ʻĀINA vividly illustrates, such is the power of agriculture and food for people and the planet.'},
   {title: 'Otherwise Engaged',
-  url: '129888782',
+  url: 'https://vimeo.com/129888782',
   short_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat facere laborum cum error nam hic quas, natus nemo, alias fugiat eaque molestiae quam quasi doloribus eos illo, eveniet expedita voluptatum.'}
 ].each do |f|
   film = Film.new(f)

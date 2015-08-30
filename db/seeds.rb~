@@ -1,6 +1,6 @@
 puts "Purged #{Film.destroy_all.count} films."
 [{title: 'Shaman',
-  url: '134639255',
+  url: 'https://vimeo.com/134639255',
   short_description: 'Inspired by the Himalayan Shaman of Northern Nepal (1967) and John T. Hitchcock, University of Wisconsin'},
   {title: 'That Which Feeds Us',
   url: '130279788',
@@ -20,13 +20,13 @@ puts "Purged #{FilmCredit.destroy_all.count} film credits."
   name: 'Robert Castiglione'},
   {film_id: Film.find_by(title: 'Shaman').id,
   role: 'Cinematographer',
-  name: 'Another Person'},
+  name: 'John Smith'},
   {film_id: Film.find_by(title: 'That Which Feeds Us').id,
   role: 'Director',
   name: 'Robert Castiglione'},
   {film_id: Film.find_by(title: 'That Which Feeds Us').id,
   role: 'DOP',
-  name: 'Third Person'},
+  name: 'Jane Doe'},
   {film_id: Film.find_by(title: 'That Which Feeds Us').id,
   role: 'Editor',
   name: 'Robert Castiglione'},
@@ -35,7 +35,7 @@ puts "Purged #{FilmCredit.destroy_all.count} film credits."
   name: 'Robert Castiglione'},
   {film_id: Film.find_by(title: 'Otherwise Engaged').id,
   role: 'Magician',
-  name: 'Quick Fingers'}
+  name: 'Mysterio Wizard'}
 ].each do |fc|
   film_credit = FilmCredit.new(fc)
   puts film_credit.errors.full_messages unless film_credit.save

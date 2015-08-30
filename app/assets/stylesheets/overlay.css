@@ -29,6 +29,16 @@
   font-style: italic;
 }
 
+.overlay-content table {
+  border: none;
+  font-size: .8em;
+}
+
+.overlay-content table tr td {
+  border: none;
+  padding-right: 2em;
+}
+
 .not-displayed {
   display: none;
 }

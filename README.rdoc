@@ -1,5 +1,4 @@
 TODO:
-build credits into cms and connect
 change film url to full url
 add order in cms and connect
 clear up db cols

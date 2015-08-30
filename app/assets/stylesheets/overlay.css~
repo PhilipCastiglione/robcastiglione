@@ -29,6 +29,20 @@
   font-style: italic;
 }
 
+.overlay-content table {
+  border: none;
+  font-size: .8em;
+}
+
+.overlay-content table tr td {
+  border: none;
+  padding-right: 1em;
+}
+
+.not-displayed {
+  display: none;
+}
+
 .hidden {
   animation-duration: .5s;
   animation-name: animateHide;

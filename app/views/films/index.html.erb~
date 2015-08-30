@@ -5,7 +5,7 @@
   <% @films.each do |film| %>
     <div>
       <%= render partial: "/shared/information_overlay", locals: {content: film} %>
-      <div class="film" id="<%= film.url.slice(18,99) %>"></div>
+      <div class="film" id="<%= film.url %>"></div>
     </div>
   <% end %>
 </div>

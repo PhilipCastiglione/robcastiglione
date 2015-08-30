@@ -1,21 +1,20 @@
-// GLOBALS
 var numFilms = 0;
 var filmsEmbedded = 0;
 var width = 0;
 var height = 0;
 
 function makeOembedScripts() {
-  var videoStartUrl = 'https://www.vimeo.com/';
   var endpoint = 'https://www.vimeo.com/api/oembed.json';
   var callback = 'embedVideo';
   var url;
-  var videoEndUrl;
+  var videoUrl;
   width = window.innerWidth;
   height = window.innerHeight - $('#nav-main')[0].getBoundingClientRect().bottom - 10;
   $.each($('.film'), function(i, el) {
     numFilms++;
-    videoEndUrl = el.id;
-    url = endpoint + '?url=' + encodeURIComponent(videoStartUrl + videoEndUrl) + '&callback=' + callback + '&width=' + width +  '&height=' + height;
+    videoUrl = el.id;
+    console.log(el.id);
+    url = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=' + width +  '&height=' + height;
     var $js = $("<script>");
     $js.attr('type', 'text/javascript');
     $js.attr('src', url);
