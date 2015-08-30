@@ -26,8 +26,4 @@ class StillsController < ApplicationController
     @still.destroy
     render json: nil
   end
-
-  def order
-    Still.find(params[:id]).send(params[:method])
-  end
 end

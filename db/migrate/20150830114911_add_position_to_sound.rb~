@@ -1,0 +1,5 @@
+class AddPositionToSound < ActiveRecord::Migration
+  def change
+    add_column :sound, :position, :integer
+  end
+end

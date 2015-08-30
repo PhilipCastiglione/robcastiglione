@@ -1,6 +1,7 @@
 <table class='admin'>
   <thead><h1 class='header'><%= (!content.empty?)? content.first.class.to_s.pluralize : 'Empty' %></h1></thead>
   <tr>
+    <th>Order</th>
     <th>Title</th>
     <th>Short Description</th>
     <th>Url</th>
@@ -9,6 +10,7 @@
   </tr>
   <% content.each do |i| %>
     <tr>
+      <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-position" %>'><span class="up">^</span> <%= i.position %> <span class="down">v</span></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-title" %>'><%= i.title %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-short-description" %>'><%= i.short_description %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-url" %>'><%= i.url %></td>

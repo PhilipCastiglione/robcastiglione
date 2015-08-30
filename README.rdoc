@@ -1,12 +1,9 @@
 TODO:
-change film url to full url
 add order in cms and connect
-clear up db cols
 polish css
 about content
 contact content
-refactor everything
 hosting solution
-check different browsers
 mobile and tablet
 thorough testing
+check different browsers

@@ -1,6 +1,6 @@
 class FilmsController < ApplicationController
   def index
-    @films = Film.all
+    @films = Film.ordered
   end
 
   def create
@@ -26,5 +26,9 @@ class FilmsController < ApplicationController
     @film.destroy
     FilmCredit.where(:film_id => params[:id]).destroy_all
     render json: nil
+  end
+
+  def order
+    Film.find(params[:id]).send(params[:method])
   end
 end

@@ -1,8 +1,6 @@
-class Sound < ActiveRecord::Base
-  scope :ordered, -> {order(:position)}
-
+class Still < ActiveRecord::Base
   after_create do
-    max = Sound.maximum(:position)
+    max = Still.maximum(:position)
     self.position = (max)? max + 1 : 0
     self.save
   end
@@ -13,8 +11,8 @@ class Sound < ActiveRecord::Base
 
   def reposition_up
     old_position = self.position
-    new_position = (self.position + 1) % Sound.maximum(:position)
-    s = Sound.find_by(:position => new_position)
+    new_position = (self.position + 1) % Still.maximum(:position)
+    s = Still.find_by(:position => new_position)
     s.position = old_position
     s.save
     self.position = new_position
@@ -23,8 +21,8 @@ class Sound < ActiveRecord::Base
 
   def reposition_down
     old_position = self.position
-    new_position = (self.position - 1 + Sound.maximum(:position)) % Sound.maximum(:position)
-    s = Sound.find_by(:position => new_position)
+    new_position = (self.position - 1 + Still.maximum(:position)) % Still.maximum(:position)
+    s = Still.find_by(:position => new_position)
     s.position = old_position
     s.save
     self.position = new_position
@@ -34,12 +32,13 @@ class Sound < ActiveRecord::Base
   private
 
   def reorder(position)
-    Sound.all.each do |sound|
-      if sound.position > position
-        sound.position = sound.position - 1
-        sound.save
+    Still.all.each do |still|
+      if still.position > position
+        still.position = still.position - 1
+        still.save
       end
     end
   end
+
 end
 

@@ -9,7 +9,7 @@
   </tr>
   <% content.each do |i| %>
     <tr>
-      <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-title" %>'><%= i.film.name %></td>
+      <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-title" %>'><%= i.film.title %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-short-description" %>'><%= i.role %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-url" %>'><%= i.name %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-edit" %>'><button class="edit" data-controller="<%= i.class.to_s.downcase.pluralize %>" data-instance="<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}" %>">edit</button></td>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805065507) do
+ActiveRecord::Schema.define(version: 20150830114921) do
 
   create_table "film_credits", force: :cascade do |t|
     t.integer  "film_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150805065507) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "position"
   end
 
   create_table "films", force: :cascade do |t|
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150805065507) do
     t.text     "short_description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "position"
   end
 
   create_table "sounds", force: :cascade do |t|
@@ -35,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150805065507) do
     t.text     "short_description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "position"
   end
 
   create_table "stills", force: :cascade do |t|
@@ -43,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150805065507) do
     t.text     "short_description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "position"
   end
 
   create_table "users", force: :cascade do |t|

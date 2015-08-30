@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def admin
     @films = Film.all
-    @film_credits = FilmCredit.all
+    @film_credits = FilmCredit.ordered
     @sounds = Sound.all
     @stills = Still.all
   end

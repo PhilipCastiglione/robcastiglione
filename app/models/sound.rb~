@@ -1,6 +1,4 @@
 class Sound < ActiveRecord::Base
-  scope :ordered, -> {order(:position)}
-
   after_create do
     max = Sound.maximum(:position)
     self.position = (max)? max + 1 : 0
