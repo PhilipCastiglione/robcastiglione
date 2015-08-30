@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   put '/films' => 'films#update'
   delete '/films' => 'films#destroy'
 
-  post '/filmcredits' => 'film_credits#create'
-  put '/filmcredits' => 'film_credits#update'
-  delete '/filmcredits' => 'film_credits#destroy'
-
   get '/sounds' => 'sounds#index'
   post '/sounds' => 'sounds#create'
   put '/sounds' => 'sounds#update'

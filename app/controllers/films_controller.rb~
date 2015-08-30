@@ -24,7 +24,6 @@ class FilmsController < ApplicationController
   def destroy
     @film = Film.find(params[:id])
     @film.destroy
-    FilmCredit.where(:film_id => params[:id]).destroy_all
     render json: nil
   end
 end

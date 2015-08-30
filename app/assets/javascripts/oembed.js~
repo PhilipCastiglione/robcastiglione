@@ -1,3 +1,4 @@
+// GLOBALS
 var numFilms = 0;
 var filmsEmbedded = 0;
 var width = 0;

@@ -5,9 +5,9 @@ function attachAdminListeners() {
       soundsCounter = 0,
       stillsCounter = 0;
 
-  $('.new').on('click', makeAddRow)
-  $('.edit').on('click', editToUpdateRow)
-  $('.delete').on('click', deleteInstance)
+  $('.new').on('click', makeAddRow);
+  $('.edit').on('click', editToUpdateRow);
+  $('.delete').on('click', deleteInstance);
 
   function makeTheCallTony(data, method) {
     $.ajax({
@@ -93,14 +93,19 @@ function attachAdminListeners() {
     makeTheCallTony(data, 'POST');
   }
 
- // BELOW THIS POINT NEED TO INCLUDE FILM CREDITS (ALSO MAKE CONTROLLER PLS)
   function editToUpdateRow() {
-    var id, $els, text, type;
+    var id, $els, text, type, credits;
     id = $(event.target).attr('data-instance');
-    els = ['title', 'short-description', 'url'];
+    if ($(event.target).attr('data-controller') == 'filmcredits') {
+      els = ['film', 'role', 'name'];
+      credits = true;
+    } else {
+      els = ['title', 'short-description', 'url'];
+      credits = false;
+    }
     $.each(els, function(i, el) {
       $el = $('#' + id + '-' + el);
-      type = (i === 1)? '<textarea>' : '<input>';
+      type = (i === 1 && !credits)? '<textarea>' : '<input>';
       $el.html($(type).val($el.text()));
     });
     $edit = $('#' + id + '-edit .edit');
@@ -116,9 +121,17 @@ function attachAdminListeners() {
   }
 
   function cancelEdit() {
-    var id, $els, text, type;
+    location.reload();
+  }
+
+  function cancelEditxxx() {
+    var id, $els, text, type, fields;
     id = $(event.target).attr('data-instance');
-    var fields = ['title', 'short-description', 'url'];
+    if ($(event.target).attr('data-controller') == 'filmcredits') {
+      fields = ['film', 'role', 'name'];
+    } else {
+      fields = ['title', 'short-description', 'url'];
+    }
     $.each(fields, function(i, el) {
       $el = $('#' + id + '-' + el);
       $el.text($el.children().val());
@@ -136,13 +149,20 @@ function attachAdminListeners() {
   }
 
   function updateInstance() {
+    var fields;
     var id = $(event.target).attr('data-instance');
     var data = {
-      id: id.slice(2),
-      title: $('#' + id + '-title').children().val(),
-      short_description: $('#' + id + '-short-description').children().val(),
-      url: $('#' + id + '-url').children().val()
+      id: id.slice(2)
     };
+    if ($(event.target).attr('data-controller') == 'filmcredits') {
+      data.film = $('#' + id + '-film').children().val();
+      data.role = $('#' + id + '-role').children().val();
+      data.name = $('#' + id + '-name').children().val();
+    } else {
+      data.title = $('#' + id + '-title').children().val();
+      data.short_description = $('#' + id + '-short-description').children().val();
+      data.url = $('#' + id + '-url').children().val();
+    }
     makeTheCallTony(data, 'PUT');
   }
 

@@ -1,3 +1,4 @@
+// GLOBALS
 var numSounds = 0;
 var soundsEmbedded = 0;
 
