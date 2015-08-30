@@ -1,5 +1,6 @@
 TODO:
 add order in cms and connect
+ do html and js for reordering
 polish css
 about content
 contact content
