@@ -1,10 +1,15 @@
 TODO:
+pictures on about/contact
 add order in cms and connect
- do html and js for reordering
+hide (i) on about and contact
+do html and js for reordering
+make it responsive
+ - break point 1: 768px
+ - break point 2:
 polish css
 about content
 contact content
 hosting solution
-mobile and tablet
 thorough testing
 check different browsers
+
