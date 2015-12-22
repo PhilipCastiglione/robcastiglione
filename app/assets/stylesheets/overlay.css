@@ -69,3 +69,9 @@
   }
 }
 
+@media (max-width: 768px) {
+  .overlay-content {
+    width: 100vw;
+    margin: 0;
+  }
+}

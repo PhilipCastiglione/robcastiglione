@@ -1,31 +1,32 @@
-#nav-main {
+#nav {
   border-bottom: solid 1px #EEE;
   background-color: #000;
 }
 
-#nav-main ul {
+#nav ul {
   margin-left: 0;
   padding: 0;
 }
 
-#nav-main li {
+#nav li {
   display: inline;
   list-style: none;
   padding-left: 3%;
 }
 
-#nav-main h2 {
+#nav h1 {
+  text-align: center;
+  color: #EEE;
+}
+
+#nav h2 {
   display: inline;
   padding: 0 2%;
   color: #EEE;
 }
 
-/* MAYBE BREAKPOINT THIS ON THE li h2
-.thingo {
-  display: block;
-}*/
-
-#nav-main a {
+#mobile-dropdown a,
+#nav a {
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
@@ -34,7 +35,8 @@
   color: #AAA;
 }
 
-#nav-main a:hover {
+#mobile-dropdown a:hover,
+#nav a:hover {
   color: #EEE;
 }
 
@@ -47,21 +49,20 @@
   border-top: 0;
 }
 
-#nav-main #overlay-button {
-  float: right;
-  margin-right: 10px;
+#overlay-button {
+  top: 10px;
+  position: fixed;
+  right: 10px;
   width: 6vh;
   height: 6vh;
-  padding-left: 0;
 }
 
-#nav-main #overlay-button img {
+#overlay-button img {
   position: absolute;
   width: 6vh;
   height: 6vh;
   cursor: pointer;
 }
-
 
 .front {
   z-index: 1;
@@ -73,4 +74,47 @@
 
 .back:hover, .hovered {
   z-index: 2;
+}
+
+#nav-mobile {
+  display: none;
+}
+
+#mobile-dropdown {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  background-color: #000;
+}
+
+#mobile-dropdown li {
+  width: 100vw;
+  list-style: none;
+  font-size: 3em;
+  padding: 4vh;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #nav-main {
+    display: none;
+  }
+
+  #nav-mobile {
+    display: block;
+  }
+
+  #overlay-button {
+    top: 14px;
+    right: 14px;
+    width: 8vh;
+    height: 8vh;
+  }
+
+  #overlay-button img {
+    width: 8vh;
+    height: 8vh;
+  }
 }
