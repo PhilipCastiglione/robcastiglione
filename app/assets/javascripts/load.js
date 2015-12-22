@@ -25,12 +25,17 @@ function ready() {
 
   var stickyNavTop = $('#nav-main').offset().top;
    
-  var stickyNav = function(){
+  var stickyNav = function() {
     var scrollTop = $(window).scrollTop();
     (scrollTop > stickyNavTop)? $('#nav-main').addClass('sticky') : $('#nav-main').removeClass('sticky');
   };
-   
   stickyNav();
+   
+  var toggleHamburger = function() {
+    $(this).toggleClass('open');
+    $('#mobile-dropdown').slideToggle();
+  }
+  $('#hamburger').on('click', toggleHamburger);
    
   $(window).resize(playersResize);
   $(window).scroll(stickyNav);

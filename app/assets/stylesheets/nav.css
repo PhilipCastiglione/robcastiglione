@@ -93,8 +93,60 @@
   width: 100vw;
   list-style: none;
   font-size: 3em;
-  padding: 4vh;
+  padding: 4vh 0;
   text-align: center;
+}
+
+#hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 8vh;
+  height: 8vh;
+  transform: rotate(0deg);
+}
+
+#hamburger span {
+  position: absolute;
+  background: #AAA;
+  width: 100%;
+  height: 4px;
+  border-radius: 30px;
+  transition: all 1s;
+  transform: rotate(0deg);
+}
+
+/* need to make this on hover on hambruger and work on the span */
+#hamburger span:hover {
+  background: #EEE;
+}
+
+#hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+#hamburger span:nth-child(2) {
+  top: 15px;
+}
+
+#hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+#hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 15px;
+  left: 0px;
+}
+
+#hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 15px;
+  left: 0px;
 }
 
 @media (max-width: 768px) {
