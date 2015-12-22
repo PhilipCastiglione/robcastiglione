@@ -116,8 +116,7 @@
   transform: rotate(0deg);
 }
 
-/* need to make this on hover on hambruger and work on the span */
-#hamburger span:hover {
+#hamburger:hover span {
   background: #EEE;
 }
 
