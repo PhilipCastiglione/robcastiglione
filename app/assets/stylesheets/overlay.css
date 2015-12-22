@@ -73,5 +73,18 @@
   .overlay-content {
     width: 100vw;
     margin: 0;
+    padding: 0;
+  }
+
+  .overlay-content h5,
+  .overlay-content p,
+  .overlay-content table {
+    margin: 5vh 5vw;
+  }
+
+  .overlay-title {
+    display: block;
+    padding-top: 5vh;
+    margin-top: 0 !important;
   }
 }
