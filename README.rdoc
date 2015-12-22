@@ -4,7 +4,7 @@ add order in cms and connect
 hide (i) on about and contact
 do html and js for reordering
 make it responsive
- - break point 1: 768px
+ - break point 1: 768px MAINLY DONE
  - break point 2:
 polish css
 about content
