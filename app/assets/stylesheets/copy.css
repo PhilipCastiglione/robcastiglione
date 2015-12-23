@@ -1,0 +1,22 @@
+.copy a {
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #AAA;
+}
+
+.copy a:hover {
+  color: #EEE;
+}
+
+.copy img.left {
+  float: left;
+  padding-right: 1em;
+}
+
+.copy img.right {
+  float: right;
+  padding-left: 1em;
+}
