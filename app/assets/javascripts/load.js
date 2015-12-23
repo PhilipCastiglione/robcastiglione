@@ -23,11 +23,11 @@ function ready() {
     attachAdminListeners();
   }
 
-  var stickyNavTop = $('#nav-main').offset().top;
+  var stickyNavTop = $('#nav').offset().top;
    
   var stickyNav = function() {
     var scrollTop = $(window).scrollTop();
-    (scrollTop > stickyNavTop)? $('#nav-main').addClass('sticky') : $('#nav-main').removeClass('sticky');
+    (scrollTop > stickyNavTop)? $('#nav').addClass('sticky') : $('#nav').removeClass('sticky');
   };
   stickyNav();
    
