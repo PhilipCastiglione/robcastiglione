@@ -1,7 +1,4 @@
 TODO:
-add positioning to admin
-ensure no admin bugs
-add model validations
 fix bug with variable height on tablet of full page views
 fix bug with tablet rolled out nav menu on long pages, appearing in flow at top
 make it responsive
