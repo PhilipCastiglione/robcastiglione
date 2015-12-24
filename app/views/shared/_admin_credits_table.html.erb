@@ -1,21 +1,21 @@
 <table class='admin'>
   <thead><h1 class='header'><%= (!content.empty?)? content.first.class.to_s.pluralize : 'Empty' %></h1></thead>
   <tr>
-    <th>Order</th>
     <th>Film</th>
     <th>Role</th>
     <th>Name</th>
     <th>Edit</th>
     <th>Delete</th>
+    <th>Order</th>
   </tr>
   <% content.each do |i| %>
     <tr>
-      <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-position" %>'><span class="up">^</span> <%= i.position %> <span class="down">v</span></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-title" %>'><%= i.film.title %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-role" %>'><%= i.role %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-name" %>'><%= i.name %></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-edit" %>'><button class="edit" data-controller="<%= i.class.to_s.downcase.pluralize %>" data-instance="<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}" %>">edit</button></td>
       <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-delete" %>'><button class="delete" data-controller="<%= i.class.to_s.downcase.pluralize %>" data-instance="<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}" %>">delete</button></td>
+      <td id='<%= "#{i.class.to_s.downcase.slice(0,2)}#{i.id}-position" %>'><%= i.position %></td>
     </tr>
   <% end %>
   <tr>
