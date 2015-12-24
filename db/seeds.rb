@@ -92,11 +92,11 @@ puts "Created #{Still.count} stills."
 
 puts "Purged #{User.destroy_all.count} user(s)."
 [{email: "philipcastiglione@gmail.com",
-  password: "test",
-  password_confirmation: "test"},
+  password: "testtest",
+  password_confirmation: "testtest"},
  {email: "rcastiglione@mac.com",
-  password: "test1",
-  password_confirmation: "test2"}
+  password: "testtest",
+  password_confirmation: "testtest"}
 ].each do |u|
   user = User.new(u)
   puts user.errors.full_messages unless user.save
