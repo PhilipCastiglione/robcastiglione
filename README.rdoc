@@ -1,8 +1,9 @@
 TODO:
+add positioning to admin
+ensure no admin bugs
+add model validations
 fix bug with variable height on tablet of full page views
 fix bug with tablet rolled out nav menu on long pages, appearing in flow at top
-add order in cms and connect
-do html and js for reordering
 make it responsive
  - break point 1: 768px MAINLY DONE
  - break point 2:
