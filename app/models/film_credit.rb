@@ -1,7 +1,7 @@
 class FilmCredit < ActiveRecord::Base
-  belongs_to :film
+  has_and_belongs_to_many :films
 
-  validates :title, :url, :short_description, :position, presence: true
+  validates :role, :name, :position, presence: true
 
-  scope :ordered, -> {order(:film_id)}
+  scope :ordered, -> {order(:position)}
 end

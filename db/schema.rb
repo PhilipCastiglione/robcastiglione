@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830114921) do
+ActiveRecord::Schema.define(version: 20151224005648) do
 
   create_table "film_credits", force: :cascade do |t|
     t.integer  "film_id"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20150830114921) do
     t.datetime "updated_at", null: false
     t.integer  "position"
   end
+
+  create_table "film_credits_films", id: false, force: :cascade do |t|
+    t.integer  "film_id",        null: false
+    t.integer  "film_credit_id", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "film_credits_films", ["film_credit_id"], name: "index_film_credits_films_on_film_credit_id"
+  add_index "film_credits_films", ["film_id"], name: "index_film_credits_films_on_film_id"
 
   create_table "films", force: :cascade do |t|
     t.string   "title"

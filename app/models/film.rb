@@ -1,5 +1,5 @@
 class Film < ActiveRecord::Base
-  has_many :film_credits
+  has_and_belongs_to_many :film_credits
 
   validates :title, :url, :short_description, :position, presence: true
 
