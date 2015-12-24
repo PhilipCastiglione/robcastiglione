@@ -22,9 +22,5 @@ class FilmCreditsController < ApplicationController
     @film_credit.destroy
     render json: nil
   end
-
-  def order
-    FilmCredit.find(params[:id]).send(params[:method])
-  end
 end
  

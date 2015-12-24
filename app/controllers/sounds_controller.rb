@@ -26,8 +26,4 @@ class SoundsController < ApplicationController
     @sound.destroy
     render json: nil
   end
-
-  def order
-    Sound.find(params[:id]).send(params[:method])
-  end
 end

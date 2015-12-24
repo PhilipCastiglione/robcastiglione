@@ -27,8 +27,4 @@ class FilmsController < ApplicationController
     FilmCredit.where(:film_id => params[:id]).destroy_all
     render json: nil
   end
-
-  def order
-    Film.find(params[:id]).send(params[:method])
-  end
 end
