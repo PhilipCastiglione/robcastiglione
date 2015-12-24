@@ -9,7 +9,7 @@ function attachAdminListeners() {
   $('.edit').on('click', editToUpdateRow);
   $('.delete').on('click', deleteInstance);
 
-  function makeTheCallTony(data, method) {
+  function adminAjax(data, method) {
     $.ajax({
       url: "/" + $(event.target).attr('data-controller'),
       dataType: 'json',
@@ -34,7 +34,7 @@ function attachAdminListeners() {
       addClassId = 'still' + stillsCounter;
       stillsCounter++;
     } else {
-      alert('wtf something broke');
+      alert('Something broke! Let the developer know.');
     }
 
     var $title = $('<td>').html($('<input>').attr('id', addClassId + 'new-title'));
@@ -80,7 +80,7 @@ function attachAdminListeners() {
       short_description: $('#' + id + 'new-short-description').val(),
       url: $('#' + id + 'new-url').val()
     };
-    makeTheCallTony(data, 'POST');
+    adminAjax(data, 'POST');
   }
 
  function addCreditInstance() {
@@ -90,7 +90,7 @@ function attachAdminListeners() {
       role: $('#' + id + 'new-role').val(),
       name: $('#' + id + 'new-name').val()
     };
-    makeTheCallTony(data, 'POST');
+    adminAjax(data, 'POST');
   }
 
   function editToUpdateRow() {
@@ -163,13 +163,13 @@ function attachAdminListeners() {
       data.short_description = $('#' + id + '-short-description').children().val();
       data.url = $('#' + id + '-url').children().val();
     }
-    makeTheCallTony(data, 'PUT');
+    adminAjax(data, 'PUT');
   }
 
   function deleteInstance() {
     var data = {
       id: $(event.target).attr('data-instance').slice(2)
     };
-    makeTheCallTony(data, 'DELETE');
+    adminAjax(data, 'DELETE');
   }
 }
