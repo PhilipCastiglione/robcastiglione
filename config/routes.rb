@@ -23,6 +23,4 @@ Rails.application.routes.draw do
   get '/about' => 'static#about'
   get '/contact' => 'static#contact'
 
-  get '/admin' => 'users#admin', :as => 'user_root'
-
 end
