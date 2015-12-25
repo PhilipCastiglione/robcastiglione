@@ -1,9 +1,4 @@
 TODO:
-fix bug with variable height on tablet of full page views
-fix bug with tablet rolled out nav menu on long pages, appearing in flow at top
-make it responsive
- - break point 1: 768px MAINLY DONE
- - break point 2:
 hosting solution
 thorough testing
 check different browsers
