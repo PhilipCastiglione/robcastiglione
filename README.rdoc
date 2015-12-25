@@ -1,5 +1,5 @@
 TODO:
+device testing
+ - minor css adjustments required!
+browser testing
 hosting solution
-thorough testing
-check different browsers
-
