@@ -10,7 +10,7 @@ function makeOembedScripts() {
   var url;
   var videoEndUrl;
   width = window.innerWidth;
-  height = window.innerHeight - $('#nav-main')[0].getBoundingClientRect().bottom - 10;
+  height = window.innerHeight - $('#nav')[0].getBoundingClientRect().bottom - 10;
   $.each($('.film'), function(i, el) {
     numFilms++;
     videoEndUrl = el.id;
@@ -34,7 +34,7 @@ function embedVideo(video) {
 
 function playersResize() {
   width = window.innerWidth;
-  height = window.innerHeight - $('#nav-main')[0].getBoundingClientRect().bottom - 10;
+  height = window.innerHeight - $('#nav')[0].getBoundingClientRect().bottom - 10;
   $('.film').width(width);
   $('.film').height(height);
 }

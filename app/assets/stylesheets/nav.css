@@ -4,8 +4,8 @@
 }
 
 #nav ul {
-  margin-left: 0;
-  padding: 0;
+  margin: 0;
+  padding: 1em 0;
 }
 
 #nav li {
@@ -17,6 +17,8 @@
 #nav h1 {
   text-align: center;
   color: #EEE;
+  margin: 0;
+  padding: 0.67em;
 }
 
 #nav h2 {
@@ -82,7 +84,8 @@
 
 #mobile-dropdown {
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 12vh;
   margin: 0;
   padding: 0;
   z-index: 10;
@@ -99,10 +102,10 @@
 
 #hamburger {
   position: fixed;
-  top: 20px;
+  top: 25px;
   left: 20px;
-  width: 8vh;
-  height: 8vh;
+  width: 7vh;
+  height: 7vh;
   transform: rotate(0deg);
 }
 
@@ -167,5 +170,35 @@
   #overlay-button img {
     width: 8vh;
     height: 8vh;
+  }
+}
+
+@media (max-width: 510px) {
+  #nav h1 {
+    padding: 0.4em;
+  }
+
+  #overlay-button {
+    top: 8px;
+    position: fixed;
+    right: 8px;
+    width: 7vh;
+    height: 7vh;
+  }
+
+  #overlay-button img {
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+    cursor: pointer;
+  }
+
+  #hamburger {
+    top: 18px;
+    left: 15px;
+  }
+
+  #mobile-dropdown {
+    top: 9.5vh;
   }
 }

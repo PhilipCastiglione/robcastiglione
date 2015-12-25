@@ -87,4 +87,14 @@
     padding-top: 5vh;
     margin-top: 0 !important;
   }
+
+  .overlay-short-description {
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+
+  .overlay-content table {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
 }
