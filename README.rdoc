@@ -1,12 +1,12 @@
 TODO:
 device and broswer testing
  - desktop chrome OK
- - desktop safari NEED TO TEST
- - desktop firefox NEED TO TEST
+ - desktop safari OK
+ - desktop firefox OK
  - desktop ie NEED TO TEST
  - desktop edge NEED TO TEST
  - ipad safari
-  - sticky header isn't very sticky and hamburger breaks on about portrait
+  - FINAL TEST ON NAV THINGS
  - iphone NEED TO TEST
  - android phone NEED TO TEST
 hosting solution
