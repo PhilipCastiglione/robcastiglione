@@ -1,5 +1,15 @@
 TODO:
-device testing
- - minor css adjustments required!
-browser testing
+device and broswer testing
+ - desktop chrome OK
+ - desktop safari NEED TO TEST
+ - desktop firefox NEED TO TEST
+ - desktop ie NEED TO TEST
+ - desktop edge NEED TO TEST
+ - ipad safari
+  - sticky header isn't very sticky and hamburger breaks on about portrait
+ - iphone NEED TO TEST
+ - android phone NEED TO TEST
 hosting solution
+
+
+NB: could ditch the sticky header thing...
