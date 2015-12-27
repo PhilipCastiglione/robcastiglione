@@ -101,7 +101,7 @@
 }
 
 #hamburger {
-  position: fixed;
+  position: absolute;
   top: 25px;
   left: 20px;
   width: 7vh;
