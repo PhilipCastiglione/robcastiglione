@@ -98,3 +98,14 @@
     line-height: 1.5em;
   }
 }
+
+@media (max-width: 510px) {
+  .overlay-title {
+    font-size: 1.2em;
+  }
+
+  .overlay-short-description {
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
