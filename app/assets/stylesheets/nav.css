@@ -42,15 +42,6 @@
   color: #EEE;
 }
 
-.sticky {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  border-top: 0;
-}
-
 #overlay-button {
   top: 10px;
   position: absolute;
@@ -84,7 +75,7 @@
 
 #mobile-dropdown {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 12vh;
   margin: 0;
   padding: 0;
