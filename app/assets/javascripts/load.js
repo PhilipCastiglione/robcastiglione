@@ -30,5 +30,4 @@ function ready() {
   $('#hamburger').on('click', toggleHamburger);
    
   $(window).resize(playersResize);
-  $(window).scroll(stickyNav);
 }

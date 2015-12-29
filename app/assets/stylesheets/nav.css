@@ -178,21 +178,21 @@
     top: 8px;
     position: absolute;
     right: 8px;
-    width: 7vh;
-    height: 7vh;
+    width: 40px;
+    height: 40px;
   }
 
   #overlay-button img {
     position: absolute;
-    width: 7vh;
-    height: 7vh;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
   }
 
   #hamburger {
-    top: 8px;
+    top: 15px;
     left: 8px;
-    width: 6.5vh;
+    width: 40px;
   }
 
   #mobile-dropdown {
