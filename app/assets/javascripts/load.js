@@ -22,15 +22,7 @@ function ready() {
   } else if (checkPath('/admin')) {
     attachAdminListeners();
   }
-
-  var stickyNavTop = $('#nav').offset().top;
-   
-  var stickyNav = function() {
-    var scrollTop = $(window).scrollTop();
-    (scrollTop > stickyNavTop)? $('#nav').addClass('sticky') : $('#nav').removeClass('sticky');
-  };
-  stickyNav();
-   
+  
   var toggleHamburger = function() {
     $(this).toggleClass('open');
     $('#mobile-dropdown').slideToggle();
