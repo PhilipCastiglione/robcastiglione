@@ -12,3 +12,12 @@ device and broswer testing
    - landscape AMENDMENTS REQUIRED
  - android phone NEED TO TEST
 hosting solution
+
+
+tablet nav hamburger and (i) are now too small and close to the edge
+implement vertical align solution and put back in flow? size with ems?
+
+need to retest once iphone landscape is working
+
+
+landscape phone needs less padding on header and smaller overlay text... maybe I need another breakpoint that checks height/ratio etc

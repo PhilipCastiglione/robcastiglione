@@ -150,21 +150,8 @@
     display: block;
   }
 
-  #overlay-button {
-    top: 10px;
-    right: 10px;
-    width: 46px;
-    height: 46px;
-  }
-
   #mobile-dropdown {
     top: 8.5vh;
-  }
-
-  #hamburger {
-    top: 15px;
-    left: 8px;
-    width: 40px;
   }
 }
 
@@ -174,11 +161,24 @@
     font-size: 1.3em;
   }
 
+  #overlay-button {
+    top: 10px;
+    right: 10px;
+    width: 46px;
+    height: 46px;
+  }
+
   #mobile-dropdown {
     top: 9.5vh;
   }
 
   #mobile-dropdown li {
     font-size: 2em;
+  }
+
+  #hamburger {
+    top: 15px;
+    left: 8px;
+    width: 40px;
   }
 }
