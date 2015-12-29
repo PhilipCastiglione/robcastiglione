@@ -185,7 +185,7 @@
 
 @media (max-height: 415px) {
   #nav h1 {
-    padding: 0.2em;
+    padding: 0.25em;
   }
 
   #overlay-button {
@@ -196,11 +196,12 @@
   }
 
   #mobile-dropdown {
-    top: 9.5vh;
+    top: 3.3em;
   }
 
   #mobile-dropdown li {
     font-size: 2em;
+    padding: 3vh;
   }
 
   #hamburger {
