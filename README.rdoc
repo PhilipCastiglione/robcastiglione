@@ -9,7 +9,8 @@ device and browser testing
  - ipad mini OK
  - iphone 6
    - portrait OK
-   - landscape NEW BREAKPOINT
- - android phone NEED TO TEST
-retest all
+   - landscape OK
+ - android phone
+   - portrait NEED TO TEST
+   - landscape NEED TO TEST
 hosting solution
