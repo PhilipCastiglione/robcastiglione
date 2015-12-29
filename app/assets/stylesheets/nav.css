@@ -52,8 +52,7 @@
 
 #overlay-button img {
   position: absolute;
-  width: 6vh;
-  height: 6vh;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -154,17 +153,18 @@
   #overlay-button {
     top: 10px;
     right: 10px;
-    width: 6.5vh;
-    height: 6.5vh;
-  }
-
-  #overlay-button img {
-    width: 6.5vh;
-    height: 6.5vh;
+    width: 46px;
+    height: 46px;
   }
 
   #mobile-dropdown {
     top: 8.5vh;
+  }
+
+  #hamburger {
+    top: 15px;
+    left: 8px;
+    width: 40px;
   }
 }
 
@@ -172,27 +172,6 @@
   #nav h1 {
     padding: 0.8em;
     font-size: 1.3em;
-  }
-
-  #overlay-button {
-    top: 8px;
-    position: absolute;
-    right: 8px;
-    width: 40px;
-    height: 40px;
-  }
-
-  #overlay-button img {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-  }
-
-  #hamburger {
-    top: 15px;
-    left: 8px;
-    width: 40px;
   }
 
   #mobile-dropdown {
