@@ -5,11 +5,10 @@ device and broswer testing
  - desktop firefox OK
  - desktop ie NEED TO TEST
  - desktop edge NEED TO TEST
- - ipad safari
-  - FINAL TEST ON NAV THINGS
+ - ipad non-mini NEED TO TEST
+ - ipad mini OK
  - iphone NEED TO TEST
+   - portrait
+   - landscape
  - android phone NEED TO TEST
 hosting solution
-
-
-NB: could ditch the sticky header thing...
