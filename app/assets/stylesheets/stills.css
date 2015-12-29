@@ -19,3 +19,9 @@
     width: 100%;
   }
 }
+
+@media (max-width: 510px) {
+  .still {
+    height: 78vh;
+  }
+}

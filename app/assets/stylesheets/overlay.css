@@ -101,11 +101,16 @@
 
 @media (max-width: 510px) {
   .overlay-title {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   .overlay-short-description {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+
+  .overlay-content table {
     font-size: 1em;
-    line-height: 1em;
+    line-height: 1.3em;
   }
 }
