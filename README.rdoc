@@ -7,7 +7,7 @@ device and broswer testing
  - desktop edge NEED TO TEST
  - ipad non-mini NEED TO TEST
  - ipad mini OK
- - iphone NEED TO TEST
+ - iphone 6 NEED TO TEST
    - portrait
    - landscape
  - android phone NEED TO TEST
