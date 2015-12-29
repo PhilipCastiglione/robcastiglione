@@ -182,3 +182,30 @@
     width: 40px;
   }
 }
+
+@media (max-height: 415px) {
+  #nav h1 {
+    padding: 0.2em;
+  }
+
+  #overlay-button {
+    top: 10px;
+    right: 10px;
+    width: 46px;
+    height: 46px;
+  }
+
+  #mobile-dropdown {
+    top: 9.5vh;
+  }
+
+  #mobile-dropdown li {
+    font-size: 2em;
+  }
+
+  #hamburger {
+    top: 15px;
+    left: 8px;
+    width: 40px;
+  }
+}
