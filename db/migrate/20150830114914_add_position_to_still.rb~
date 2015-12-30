@@ -1,4 +1,0 @@
-class AddPositionToStill < ActiveRecord::Migration
-  def change
-  end
-end

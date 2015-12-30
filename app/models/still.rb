@@ -1,5 +1,5 @@
 class Still < ActiveRecord::Base
-  validates :title, :url, :short_description, :position, presence: true
+  validates :title, :url, :short_description, :order, presence: true
 
-  scope :ordered, -> {order(:position)}
+  scope :ordered, -> {order(:order)}
 end

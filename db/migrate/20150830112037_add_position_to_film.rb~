@@ -1,4 +1,0 @@
-class AddPositionToFilm < ActiveRecord::Migration
-  def change
-  end
-end
