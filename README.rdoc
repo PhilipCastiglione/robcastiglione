@@ -14,3 +14,5 @@ device and browser testing
    - portrait NEED TO TEST
    - landscape NEED TO TEST
 hosting solution
+
+change position to order and remove from film credit? change to display on one page by not displaying timestamps in admin
