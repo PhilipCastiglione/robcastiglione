@@ -19,3 +19,5 @@
 # Ignore vimfiles
 *.sw*
 *~
+
+*DS_Store*
