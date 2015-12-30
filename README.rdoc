@@ -13,6 +13,7 @@ device and browser testing
  - android phone
    - portrait NEED TO TEST
    - landscape NEED TO TEST
-hosting solution
-
-update login passwords for admin
+heroku upgrade from hobby acc
+CNAME
+content for about and contact
+help input films, sounds, stills
