@@ -14,12 +14,10 @@
 ActiveRecord::Schema.define(version: 20151224005648) do
 
   create_table "film_credits", force: :cascade do |t|
-    t.integer  "film_id"
     t.string   "role"
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "position"
   end
 
   create_table "film_credits_films", id: false, force: :cascade do |t|
@@ -38,7 +36,7 @@ ActiveRecord::Schema.define(version: 20151224005648) do
     t.text     "short_description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.integer  "position"
+    t.integer  "order"
   end
 
   create_table "sounds", force: :cascade do |t|
@@ -47,7 +45,7 @@ ActiveRecord::Schema.define(version: 20151224005648) do
     t.text     "short_description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.integer  "position"
+    t.integer  "order"
   end
 
   create_table "stills", force: :cascade do |t|
@@ -56,7 +54,7 @@ ActiveRecord::Schema.define(version: 20151224005648) do
     t.text     "short_description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.integer  "position"
+    t.integer  "order"
   end
 
   create_table "users", force: :cascade do |t|
