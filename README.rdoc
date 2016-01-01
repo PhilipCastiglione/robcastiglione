@@ -16,4 +16,4 @@ device and browser testing
 heroku upgrade from hobby acc
 CNAME
 content for about and contact
-help input films, sounds, stills
+look into analytics
