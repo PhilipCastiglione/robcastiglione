@@ -1,7 +1,7 @@
 <div class="overlay-wrapper">
   <div class="overlay-content">
     <h5 class="overlay-title"><%= content.title %></h5>
-    <p class="overlay-short-description"><%= content.short_description %></p>
+    <p class="overlay-short-description"><%= content.short_description.html_safe %></p>
     <table>
       <% if content.class == Film %>
         <% content.film_credits.each do |credit| %>
