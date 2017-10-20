@@ -27,4 +27,8 @@ class FilmsController < ApplicationController
     FilmCredit.where(:film_id => params[:id]).destroy_all
     render json: nil
   end
+
+  def projects
+    @films = Film.where.not(thumbnail: false).ordered
+  end
 end
