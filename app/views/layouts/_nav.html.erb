@@ -7,10 +7,7 @@
       <a href="/">FILM</a>
     </li>
     <li>
-      <a href="/sounds">SOUND</a>
-    </li>
-    <li>
-      <a href="/stills">STILLS</a>
+      <a href="/projects">RECENT PROJECTS</a>
     </li>
     <li>
       <a href="/about">ABOUT</a>
@@ -27,7 +24,7 @@
     </div>
     <h1>ROBERT CASTIGLIONE</h1>
   </div>
-  <% if ['/', '/sounds', '/stills'].include?(request.path) %>
+  <% if request.path == '/' %>
     <div id="overlay-button"><img class='front' src="/info-light.png" alt="info"><img class='back' src="/info-lightest.png" alt="info"></div>
   <% end %>
 </nav>
@@ -36,10 +33,7 @@
       <a href="/">FILM</a>
     </li>
     <li>
-      <a href="/sounds">SOUND</a>
-    </li>
-    <li>
-      <a href="/stills">STILLS</a>
+      <a href="/projects">RECENT PROJECTS</a>
     </li>
     <li>
       <a href="/about">ABOUT</a>

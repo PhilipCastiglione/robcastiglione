@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :films, :filmcredits, :sounds, :stills 
+  resources :films, :filmcredits
   get '/' => 'films#index', :as => 'root'
+  get '/projects' => 'films#projects'
 
   get '/about' => 'static#about'
   get '/contact' => 'static#contact'
