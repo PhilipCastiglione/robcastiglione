@@ -19,9 +19,23 @@
   text-align: center;
 }
 
+
+.films-thumbnails a {
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #AAA;
+}
+
+.films-thumbnails a:hover {
+  color: #EEE;
+}
+
 .thumbnail {
   max-height: 20vh;
-  max-width: 35vw;
+  max-width: 30vw;
   padding: 5vw;
   display: inline-block;
 }

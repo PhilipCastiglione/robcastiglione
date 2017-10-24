@@ -2,6 +2,7 @@
   <% @films.each do |film| %>
     <div class="thumbnail">
       <a href="<%= film.url %>" target="_blank" rel="noopener noreferrer">
+        <h3><%= film.title %></h3>
         <img src="<%= film.thumbnail %>" alt="thumbnail">
       </a>
     </div>
