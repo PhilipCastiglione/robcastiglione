@@ -1,4 +1,4 @@
-$(ready);
+$(document).on('turbolinks:load', ready);
 
 function checkPath(path) {
   return window.location.pathname === path;
