@@ -29,6 +29,6 @@ class FilmsController < ApplicationController
   end
 
   def projects
-    @films = Film.where.not(thumbnail: false).ordered
+    @films = Film.ordered.select { |f| f.thumbnail.present? }
   end
 end
