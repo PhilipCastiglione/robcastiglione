@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Robert Castiglione</title>
+    <link rel="stylesheet" type="text/css" href="/normalize.css">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="/slick.min.js"></script>
+    <meta name="viewport" content="initial-scale=1">
+
+  </head>
+  <body>
+
+    <nav id='nav'>
+      <ul id='nav-main'>
+        <li>
+          <h2>ROBERT CASTIGLIONE</h3>
+        </li>
+        <li>
+          <a href="/">FILM</a>
+        </li>
+        <li>
+          <a href="/recent.html">RECENT PROJECTS</a>
+        </li>
+        <li>
+          <a href="/about.html">ABOUT</a>
+        </li>
+        <li>
+          <a href="/contact.html">CONTACT</a>
+        </li>
+      </ul>
+      <div id='nav-mobile'>
+        <div id='hamburger'>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <h1>ROBERT CASTIGLIONE</h1>
+      </div>
+    </nav>
+    <ul id='mobile-dropdown'>
+      <li>
+        <a href="/">FILM</a>
+      </li>
+      <li>
+        <a href="/projects.html">RECENT PROJECTS</a>
+      </li>
+      <li>
+        <a href="/about.html">ABOUT</a>
+      </li>
+      <li>
+        <a href="/contact.html">CONTACT</a>
+      </li>
+    </ul>
+
+    <main class="content">
+      <div class="loading-wrapper">
+        <img class="loading" src="/loading.gif" alt="loading...">
+      </div>
+      <div id="films-carousel" class="films-carousel">
+      </div>
+    </main>
+
+    <script>
+      $.each(window.films, (_, film) => {
+        $("#films-carousel").append($("<div>", { class: "film", id: film.id }));
+      });
+    </script>
+
+  </body>
+</html>
