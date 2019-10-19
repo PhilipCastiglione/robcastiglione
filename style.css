@@ -97,20 +97,6 @@ body {
   color: #EEE;
 }
 
-#overlay-button {
-  top: 10px;
-  position: absolute;
-  right: 10px;
-  width: 6vh;
-  height: 6vh;
-}
-
-#overlay-button img {
-  position: absolute;
-  width: 100%;
-  cursor: pointer;
-}
-
 .front {
   z-index: 1;
 }
@@ -216,13 +202,6 @@ body {
     font-size: 1.3em;
   }
 
-  #overlay-button {
-    top: 10px;
-    right: 10px;
-    width: 46px;
-    height: 46px;
-  }
-
   #mobile-dropdown {
     top: 9.5vh;
   }
@@ -241,13 +220,6 @@ body {
 @media (max-height: 415px) {
   #nav h1 {
     padding: 0.25em;
-  }
-
-  #overlay-button {
-    top: 10px;
-    right: 10px;
-    width: 46px;
-    height: 46px;
   }
 
   #mobile-dropdown {
