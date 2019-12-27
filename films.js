@@ -55,7 +55,7 @@ window.films = [
   },
   {
     id: "240327612",
-    title: "Beauty Index 8 September",
+    title: "Beauty Index",
     thumbnail: "https://i.vimeocdn.com/video/663585840_1280x534.jpg",
     featured: true,
   },
@@ -139,19 +139,19 @@ window.films = [
   },
   {
     id: "362709338",
-    title: "Hey Baby 15 September 2019",
+    title: "Hey Baby",
     thumbnail: "https://i.vimeocdn.com/video/817639372.jpg",
     featured: true,
   },
   {
     id: "362476425",
-    title: "Tender Hearted Woman 26 sept 2019",
+    title: "Tender Hearted Woman",
     thumbnail: "https://i.vimeocdn.com/video/817325769.jpg",
     featured: true,
   },
   {
     id: "359928213",
-    title: "Four Noongar artists 3 July 2019",
+    title: "Four Noongar artists",
     thumbnail: "https://i.vimeocdn.com/video/813962463.jpg",
     featured: true,
   },
