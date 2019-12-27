@@ -125,5 +125,65 @@ window.films = [
     thumbnail: "https://i.vimeocdn.com/video/716030131.jpg",
     featured: true,
   },
+  {
+    id: "370464725",
+    title: "Seeking Sanctuary",
+    thumbnail: "https://i.vimeocdn.com/video/827705600.jpg",
+    featured: true,
+  },
+  {
+    id: "370463011",
+    title: "Be My Husband",
+    thumbnail: "https://i.vimeocdn.com/video/827701418.jpg",
+    featured: true,
+  },
+  {
+    id: "362709338",
+    title: "Hey Baby 15 September 2019",
+    thumbnail: "https://i.vimeocdn.com/video/817639372.jpg",
+    featured: true,
+  },
+  {
+    id: "362476425",
+    title: "Tender Hearted Woman 26 sept 2019",
+    thumbnail: "https://i.vimeocdn.com/video/817325769.jpg",
+    featured: true,
+  },
+  {
+    id: "359928213",
+    title: "Four Noongar artists 3 July 2019",
+    thumbnail: "https://i.vimeocdn.com/video/813962463.jpg",
+    featured: true,
+  },
+  {
+    id: "359925644",
+    title: "My Lovers Hands",
+    thumbnail: "https://i.vimeocdn.com/video/813960345.jpg",
+    featured: true,
+  },
+  {
+    id: "356562204",
+    title: "Presence of Wool Excerpts",
+    thumbnail: "https://i.vimeocdn.com/video/809685689.jpg",
+    featured: true,
+  },
+  {
+    id: "355078388",
+    title: "Chorus",
+    thumbnail: "https://i.vimeocdn.com/video/807770428.jpg",
+    featured: true,
+  },
+  {
+    id: "355074075",
+    title: "Presence of Wool",
+    thumbnail: "https://i.vimeocdn.com/video/807765499.jpg",
+    featured: true,
+  },
+  {
+    id: "355063096",
+    title: "The Grace of You",
+    thumbnail: "https://i.vimeocdn.com/video/807752512.jpg",
+    featured: true,
+  },
 ];
 
