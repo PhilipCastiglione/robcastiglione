@@ -191,5 +191,11 @@ window.films = [
     thumbnail: "https://i.vimeocdn.com/video/842416323.jpg",
     featured: true,
   },
+  {
+    id: "392913582",
+    title: "Chorus A Gestural Opera",
+    thumbnail: "https://i.vimeocdn.com/video/858205316.jpg",
+    featured: true,
+  },
 ];
 
