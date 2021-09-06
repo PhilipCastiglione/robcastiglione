@@ -224,7 +224,7 @@ window.films = [
   {
     id: "593986838",
     title: "The Music of Poetry",
-    thumbnail: "https://i.vimeocdn.com/video/1227151433.jpg",
+    thumbnail: "https://i.vimeocdn.com/video/1232555654.jpg",
     featured: true,
   },
 ];
