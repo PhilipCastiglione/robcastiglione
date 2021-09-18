@@ -50,13 +50,13 @@ window.films = [
   {
     id: "240324102",
     title: "Together Like This",
-    thumbnail: "https://i.vimeocdn.com/video/663581762_1280x534.jpg",
+    thumbnail: "https://i.vimeocdn.com/video/1232576962-0ebd6cf4f27cde1e888245f687245c3a7480ca3ffb3b9da22569a9731f297150-d",
     featured: true,
   },
   {
     id: "240327612",
     title: "Beauty Index",
-    thumbnail: "https://i.vimeocdn.com/video/663585840_1280x534.jpg",
+    thumbnail: "https://i.vimeocdn.com/video/663585840-ba8fb3ced81394d1e947e4ef334c58522da99dd98034b1f2d39f55db5a1a62e7-d",
     featured: true,
   },
   {
