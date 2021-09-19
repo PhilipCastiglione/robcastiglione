@@ -98,7 +98,7 @@ window.films = [
   {
     id: "184482796",
     title: "The Singer",
-    thumbnail: "https://i.vimeocdn.com/video/593944682_1280x533.jpg",
+    thumbnail: "https://i.vimeocdn.com/video/593944682-d22f4745b3c0a64ee98ed70e0bd24f997f6f46f7ac971b851785a5db9f878fb4-d",
     featured: true,
   },
   {
