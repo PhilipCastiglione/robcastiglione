@@ -5,6 +5,17 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.notice {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    font-style: italic;
+}
+
 .copy {
   width: 60%;
   margin: 0 auto;
